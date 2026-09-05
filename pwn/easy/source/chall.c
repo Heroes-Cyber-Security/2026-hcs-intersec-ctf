@@ -15,6 +15,7 @@ void vuln() {
 }
 
 int main() {
+    setup();
     puts("Hi, welcome to easy challs");
     puts("i bet you can solve this one under 5 minutes");
     puts("Try: ");

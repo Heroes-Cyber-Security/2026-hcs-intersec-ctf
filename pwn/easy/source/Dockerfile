@@ -1,7 +1,7 @@
-from DEBIAN:trixie
+from debian:trixie
 
 RUN apt-get update && apt-get install -y \
-    socat\
+    socat \
     && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -m ly
