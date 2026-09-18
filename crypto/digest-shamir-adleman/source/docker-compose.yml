@@ -1,0 +1,10 @@
+name: digest-shamir-adleman
+
+services:
+  dsa:
+    build: .
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    environment:
+      - FLAG=HCS{N3v3r_R3u5e_Y0ur_N0nc35}
