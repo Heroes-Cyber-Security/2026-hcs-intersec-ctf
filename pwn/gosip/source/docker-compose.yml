@@ -1,0 +1,18 @@
+name: gosip
+
+services:
+  gosip:
+    build: .
+    container_name: gosip
+    ports:
+      - "4412:4412"
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 128m
+    pids_limit: 50
