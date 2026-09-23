@@ -1,0 +1,11 @@
+name: snake-v4
+
+services:
+  web:
+    image: php:8-cli
+    working_dir: /srv/frontend
+    command: php -S 0.0.0.0:8000 ../backend/server.php
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/srv
