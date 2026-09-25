@@ -1,4 +1,4 @@
-from debian:trixie
+FROM debian:trixie
 
 RUN apt-get update && apt-get install -y \
     socat \
@@ -9,15 +9,16 @@ WORKDIR /home/ly
 
 COPY chall /home/ly/chall
 COPY flag.txt /home/ly/flag.txt
+COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /home/ly/chall && \
+    chmod +x /entrypoint.sh && \
     chown -R root:root /home/ly && \
     chmod 755 /home/ly && \
-    chown 755 /home/ly/chall && \
-    chown ly:ly /home/ly/flag.txt && \
-    chmod 400 /home/ly/flag.txt
+    chown root:root /home/ly/chall && \
+    chmod 755 /home/ly/chall
 
 USER ly
 EXPOSE 4411
 
-CMD ["socat", "TCP-LISTEN:4411,reuseaddr,fork", "EXEC:/home/ly/chall,stderr"]
+ENTRYPOINT ["/entrypoint.sh"]
