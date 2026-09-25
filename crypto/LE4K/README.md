@@ -14,4 +14,4 @@ Leaks again...
 
 ## Flag
 
-HCS{https://youtu.be/y1FX2_r1HAs}
+HCS{L3AK_fr0m_t3mu_}

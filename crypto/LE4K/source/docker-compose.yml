@@ -8,4 +8,4 @@ services:
       - "6767:5000"
     restart: unless-stopped
     environment:
-      - FLAG=HCS{https://youtu.be/y1FX2_r1HAs}
+      - FLAG=HCS{L3AK_fr0m_t3mu_}
