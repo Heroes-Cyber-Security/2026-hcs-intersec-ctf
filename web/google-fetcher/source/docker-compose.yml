@@ -13,7 +13,7 @@ services:
     image: google-fetcher-backend
     build: ./backend
     environment:
-      CTF_FLAGS: ${RCTF_FLAG}
+      CTF_FLAGS: ${RCTF_FLAGS}
 
     networks:
       - google-fetcher-net
