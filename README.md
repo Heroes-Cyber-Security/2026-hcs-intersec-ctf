@@ -39,15 +39,18 @@ lorem ipsum dolor sit amet
 
 ## Flag
 
-HCS{.*}
+HCS{.\*}
 ```
 
 ### docker-compose.yaml convention
 
 For `docker-compose.yaml` file please attach the `name` field on the configuration to prevent the orphan container, ex:
 
+### challenge.yaml
+
+Used for rctf instancer
+
 ```yaml
 name: this-is-challenge-name
-
 ...
 ```

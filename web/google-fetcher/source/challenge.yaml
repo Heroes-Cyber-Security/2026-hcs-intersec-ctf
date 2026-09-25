@@ -1,0 +1,25 @@
+services:
+  web:
+    image: google-fetcher-web
+    networks:
+      - google-fetcher-net
+    expose:
+      - "8080"
+    mem_limit: 128m
+    cpus: 0.5
+    read_only: true
+    pids_limit: 128
+  backend:
+    image: google-fetcher-backend
+    environment:
+      CTF_FLAGS: ${RCTF_FLAG}
+    networks:
+      - google-fetcher-net
+    read_only: false
+    mem_limit: 128m
+    cpus: 0.5
+    pids_limit: 128
+networks:
+  google-fetcher-net:
+    internal: false
+    driver: bridge
