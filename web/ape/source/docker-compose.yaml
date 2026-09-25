@@ -2,9 +2,15 @@ name: ape
 
 services:
   web:
+    image: ape-web
     build: .
     ports:
       - "5555:5555"
     environment:
-      - FLAG=HCS{gh4r0wwwwwwwwwwwwwwwwwwwww_k1ng_g1thub_gu3_4ku1n}
-      - PORT=5555
+      - FLAG=${RCTF_FLAG:-}
+    networks:
+      - ape
+networks:
+  ape:
+    internal: false
+    driver: bridge

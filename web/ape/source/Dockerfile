@@ -10,7 +10,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app.py .
 COPY templates/ templates/
+COPY entrypoint.sh .
+RUN chmod +x entrypoint.sh
 
 EXPOSE 5555
 
-CMD ["python", "app.py"]
+ENTRYPOINT ["./entrypoint.sh"]
