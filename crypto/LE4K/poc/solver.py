@@ -2,8 +2,8 @@ from pwn import *
 from math import isqrt
 from Crypto.Util.number import long_to_bytes, inverse
 
-HOST = ''
-PORT = 6767
+HOST = 'le4k-6e4eaa974291.challenge.hcs-team.com'
+PORT = 1337
 ROUNDS = 5
 
 def solve(n, e, c, qinv):
@@ -32,16 +32,16 @@ def solve(n, e, c, qinv):
 
         return long_to_bytes(m)
 
-r = remote(HOST, PORT)
+r = remote(HOST, PORT, ssl=True)
 
 for rnd in range(ROUNDS):
-    r.recvuntil(f"Round {r+1}\n".encode())
-    n = int(rnd.recvline().decode().strip().split("=")[1])
-    e = int(rnd.recvline().decode().strip().split("=")[1])
-    c = int(rnd.recvline().decode().strip().split("=")[1])
-    hmmm = int(rnd.recvline().decode().strip().split("=")[1])
+    r.recvuntil(f"Round {rnd+1}\n".encode())
+    n = int(r.recvline().decode().strip().split("=")[1])
+    e = int(r.recvline().decode().strip().split("=")[1])
+    c = int(r.recvline().decode().strip().split("=")[1])
+    hmmm = int(r.recvline().decode().strip().split("=")[1])
     
     m = solve(n, e, c, hmmm)
-    rnd.sendlineafter(b"(hex): ", m.hex().encode())
+    r.sendlineafter(b"(hex): ", m.hex().encode())
 
-print(rnd.recvall().decode())
+print(r.recvall().decode())

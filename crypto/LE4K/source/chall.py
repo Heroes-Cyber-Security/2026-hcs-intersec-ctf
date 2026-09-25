@@ -45,6 +45,4 @@ if __name__ == '__main__':
             exit(1)
         print()
 
-    print("Congrats!! Hope you didn't solve it like a prompstitute slopper")
-    print(f"Here's the flag: {FLAG}")
-    print("\nAlso my friend's currently open for commissions, check them out:\nhttps://naowospace.carrd.co/")
+    print(f"Congrats!! Hope you didn't solve it like a prompstitute slopper\nHere's the flag: {FLAG}\nAlso my friend's currently open for commissions, check them out:\nhttps://naowospace.carrd.co/")
