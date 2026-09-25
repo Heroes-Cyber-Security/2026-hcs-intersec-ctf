@@ -7,7 +7,7 @@ services:
       - sign-up-net
     expose:
       - "4411"
-    read_only: true
+    read_only: false
     cap_drop:
       - ALL
     security_opt:

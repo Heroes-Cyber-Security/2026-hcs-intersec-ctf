@@ -7,7 +7,7 @@ services:
       - welcome-to-hcs-net
     expose:
       - "4413"
-    read_only: true
+    read_only: false
     cap_drop:
       - ALL
     security_opt:
