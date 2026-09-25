@@ -1,7 +1,7 @@
 name: le4k
 
 services:
-  aessea:
+  le4k:
     image: le4k
     build: .
     ports:
