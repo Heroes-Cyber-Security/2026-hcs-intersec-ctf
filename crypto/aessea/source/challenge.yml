@@ -1,0 +1,12 @@
+services:
+  aessea:
+    image: aessea
+    build: .
+    expose:
+      - "5001"
+    restart: unless-stopped
+    environment:
+      FLAG: ${RCTF_FLAG}
+    mem_limit: 128m
+    cpus: 0.5
+    pids_limit: 128

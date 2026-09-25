@@ -2,6 +2,7 @@ name: aessea
 
 services:
   aessea:
+    image: aessea
     build: .
     ports:
       - "5001:5000"
