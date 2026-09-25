@@ -3,6 +3,7 @@ name: sign-up
 
 services:
   sign-up:
+    image: sign-up
     build: .
     container_name: sign-up
     environment:
@@ -12,16 +13,6 @@ services:
     restart: unless-stopped
     networks:
       - sign-up-net
-    read_only: true
-    tmpfs:
-      - /tmp
-    cap_drop:
-      - ALL
-    security_opt:
-      - no-new-privileges:true
-    mem_limit: 128m
-    cpus: 0.5
-    pids_limit: 50
 
 networks:
   sign-up-net:
