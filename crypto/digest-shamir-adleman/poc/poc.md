@@ -8,11 +8,14 @@ Example pair:
 
 ## 2. Decrypt received signature with RSA
 
-RSA biasa, decrypt aja kyk biasa
+RSA biasa, decrypt aja kyk biasa. N ada di factordb, dapetin D buat decrypt
 
 ```py
-def decrypt_rsa(m, n, e):
-    return pow(m,e, n)
+euler_tot = (P_RSA-1) * (Q_RSA-1)
+D = pow(e, -1, euler_tot)
+
+def decrypt_rsa(m, n, D):
+    return pow(m,D, n)
 ```
 
 ## 3. DSA nonce reuse

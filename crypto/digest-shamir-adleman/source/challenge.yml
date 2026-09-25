@@ -1,0 +1,12 @@
+services:
+  dsa:
+    image: dsa
+    build: .
+    expose:
+      - "5000"
+    restart: unless-stopped
+    environment:
+      FLAG: ${RCTF_FLAG}
+    mem_limit: 128m
+    cpus: 0.5
+    pids_limit: 128
