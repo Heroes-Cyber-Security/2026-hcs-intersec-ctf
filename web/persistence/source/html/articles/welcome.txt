@@ -1,0 +1,7 @@
+Welcome to Vaultnotes.
+
+This vault keeps short internal articles and lets the team attach images to
+their notes. Everything you upload is checked before it is stored, so feel
+free to drag in screenshots and diagrams.
+
+Happy writing!

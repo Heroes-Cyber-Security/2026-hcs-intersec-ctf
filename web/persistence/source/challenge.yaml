@@ -1,0 +1,17 @@
+services:
+  web:
+    image: persistence-web
+    environment:
+      FLAG: ${RCTF_FLAG}
+    networks:
+      - persistence-net
+    expose:
+      - "80"
+    mem_limit: 128m
+    cpus: 0.5
+    read_only: false
+    pids_limit: 128
+networks:
+  persistence-net:
+    internal: false
+    driver: bridge

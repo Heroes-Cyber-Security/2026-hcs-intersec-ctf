@@ -1,0 +1,8 @@
+Housekeeping tips
+
+- Keep filenames boring. The server renames them anyway.
+- Images only: jpeg, png, gif and webp are accepted.
+- Attachments are kept outside the public folder. You will not be able to
+  fetch them directly, and that is on purpose.
+- If an upload looks stuck, the little progress bar under the form polls the
+  server while the bytes are still arriving.
