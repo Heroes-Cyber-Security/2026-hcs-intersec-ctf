@@ -1,7 +1,7 @@
 services:
-  register:
+  sign-up:
     build: .
-    container_name: register
+    container_name: sign-up
     ports:
       - "4411:4411"
     restart: unless-stopped
