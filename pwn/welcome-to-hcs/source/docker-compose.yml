@@ -1,0 +1,20 @@
+version: "3.8"
+name: welcome-to-hcs
+
+services:
+  welcome-to-hcs:
+    image: welcome-to-hcs
+    build: .
+    container_name: welcome-to-hcs
+    environment:
+      CTF_FLAG: ${RCTF_FLAG}
+    ports:
+      - 
+    restart: unless-stopped
+    networks:
+      - welcome-to-hcs-net
+
+networks:
+  welcome-to-hcs-net:
+    internal: false
+    driver: bridge
