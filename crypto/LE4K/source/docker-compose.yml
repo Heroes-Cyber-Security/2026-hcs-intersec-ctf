@@ -1,0 +1,11 @@
+name: LE4K
+
+services:
+  aessea:
+    image: LE4K
+    build: .
+    ports:
+      - "6767:5000"
+    restart: unless-stopped
+    environment:
+      - FLAG=HCS{https://youtu.be/y1FX2_r1HAs}

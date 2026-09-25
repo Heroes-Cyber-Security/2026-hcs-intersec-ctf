@@ -1,0 +1,12 @@
+services:
+  LE4K:
+    image: LE4K
+    build: .
+    expose:
+      - "6767"
+    restart: unless-stopped
+    environment:
+      FLAG: ${RCTF_FLAG}
+    mem_limit: 128m
+    cpus: 0.5
+    pids_limit: 128
