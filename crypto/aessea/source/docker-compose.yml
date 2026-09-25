@@ -1,0 +1,10 @@
+name: aessea
+
+services:
+  aessea:
+    build: .
+    ports:
+      - "5001:5000"
+    restart: unless-stopped
+    environment:
+      - FLAG=HCS{kamu_4dm1n_J4G0_99}
