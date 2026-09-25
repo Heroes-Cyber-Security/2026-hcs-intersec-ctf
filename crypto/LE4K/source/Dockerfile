@@ -5,7 +5,7 @@ RUN useradd -m -u 1000 ctf
 WORKDIR /app
 
 RUN pip install --no-cache-dir pycryptodome
-COPY server.py .
+COPY chall.py .
 
 USER ctf
 
