@@ -1,16 +1,20 @@
+version: "3.8"
+name: sign-up
+
 services:
   sign-up:
+    image: sign-up
     build: .
     container_name: sign-up
+    environment:
+      CTF_FLAGS: ${RCTF_FLAG}
     ports:
       - "4411:4411"
     restart: unless-stopped
-    read_only: true
-    tmpfs:
-      - /tmp
-    cap_drop:
-      - ALL
-    security_opt:
-      - no-new-privileges:true
-    mem_limit: 128m
-    pids_limit: 50
+    networks:
+      - sign-up-net
+
+networks:
+  sign-up-net:
+    internal: false
+    driver: bridge
