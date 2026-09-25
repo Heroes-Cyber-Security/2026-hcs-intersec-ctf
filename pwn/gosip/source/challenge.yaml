@@ -1,0 +1,22 @@
+services:
+  gosip:
+    image: gosip
+    environment:
+      CTF_FLAG: ${RCTF_FLAG}
+    networks:
+      - gosip-net
+    expose:
+      - "4412"
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 128m
+    cpus: 0.5
+    pids_limit: 50
+
+networks:
+  sign-up-net:
+    internal: false
+    driver: bridge
