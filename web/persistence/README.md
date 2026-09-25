@@ -14,4 +14,4 @@ To reach the pinnacle of anything, a person must possess a certain quality that 
 
 ## Flag
 
-HCS{th0s3_wh0_p3rs1st_4nd_4d4pt_w1n}
+HCS{th0s3_wh0_p3rs1st_4nd_4d4pt_w1n_4nd_sh4ll_ev0lve_thr0ugh_th3_shad0ws}
