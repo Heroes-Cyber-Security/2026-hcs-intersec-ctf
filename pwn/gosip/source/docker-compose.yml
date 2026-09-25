@@ -1,8 +1,9 @@
 version: "3.8"
-# name: gosip
+name: gosip
 
 services:
   gosip:
+    image: gosip
     build: .
     container_name: gosip
     ports:
