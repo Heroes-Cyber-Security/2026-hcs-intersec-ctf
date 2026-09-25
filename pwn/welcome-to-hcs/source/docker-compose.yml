@@ -9,7 +9,7 @@ services:
     environment:
       CTF_FLAG: ${RCTF_FLAG}
     ports:
-      - 
+      - 4413
     restart: unless-stopped
     networks:
       - welcome-to-hcs-net

@@ -21,6 +21,6 @@ RUN chmod +x /home/hcs/chall && \
     chmod 444 /home/hcs/flag.txt
 
 USER hcs
-EXPOSE 4412
+EXPOSE 4413
 
 ENTRYPOINT ["/entrypoint.sh"]

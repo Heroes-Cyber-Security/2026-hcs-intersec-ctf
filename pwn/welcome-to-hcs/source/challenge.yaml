@@ -6,7 +6,7 @@ services:
     networks:
       - welcome-to-hcs-net
     expose:
-      - 
+      - 4413
     read_only: true
     cap_drop:
       - ALL
