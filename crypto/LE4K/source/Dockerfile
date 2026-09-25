@@ -9,6 +9,6 @@ COPY server.py .
 
 USER ctf
 
-EXPOSE 6767
+EXPOSE 5000
 
-CMD ["socat", "TCP-LISTEN:6767,reuseaddr,fork", "EXEC:python3 -u chall.py"]
+CMD ["socat", "TCP-LISTEN:5000,reuseaddr,fork", "EXEC:python3 -u chall.py"]
