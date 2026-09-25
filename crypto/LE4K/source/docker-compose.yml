@@ -1,8 +1,8 @@
-name: LE4K
+name: le4k
 
 services:
   aessea:
-    image: LE4K
+    image: le4k
     build: .
     ports:
       - "6767:5000"

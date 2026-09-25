@@ -1,6 +1,6 @@
 services:
-  LE4K:
-    image: LE4K
+  le4k:
+    image: le4k
     build: .
     expose:
       - "6767"
