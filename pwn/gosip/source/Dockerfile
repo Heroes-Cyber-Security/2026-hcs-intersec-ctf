@@ -8,7 +8,7 @@ RUN useradd -m gosip
 WORKDIR /home/gosip
 
 COPY chall /home/gosip/chall
-COPY flag.txt /home/gosip/flag.txt
+COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /home/gosip/chall && \
     chmod +x /entrypoint.sh && \
