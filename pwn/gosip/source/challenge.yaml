@@ -17,6 +17,6 @@ services:
     pids_limit: 50
 
 networks:
-  sign-up-net:
+  gosip-net:
     internal: false
     driver: bridge

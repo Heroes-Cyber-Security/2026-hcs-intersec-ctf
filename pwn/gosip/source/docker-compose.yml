@@ -13,6 +13,6 @@ services:
       - gosip-net
 
 networks:
-  sign-up-net:
+  gosip-net:
     internal: false
     driver: bridge
