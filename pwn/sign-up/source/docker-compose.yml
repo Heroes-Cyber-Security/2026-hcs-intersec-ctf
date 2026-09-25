@@ -7,7 +7,7 @@ services:
     build: .
     container_name: sign-up
     environment:
-      CTF_FLAGS: ${RCTF_FLAG}
+      CTF_FLAG: ${RCTF_FLAG}
     ports:
       - "4411:4411"
     restart: unless-stopped

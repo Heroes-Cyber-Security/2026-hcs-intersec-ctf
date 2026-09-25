@@ -1,4 +1,5 @@
-name: gosip
+version: "3.8"
+# name: gosip
 
 services:
   gosip:
@@ -8,7 +9,7 @@ services:
       - "4412:4412"
     restart: unless-stopped
     environment:
-      CTF_FLAGS: ${RCTF_FLAG}
+      CTF_FLAG: ${RCTF_FLAG}
     networks:
       - gosip-net
 
