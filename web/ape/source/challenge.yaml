@@ -1,0 +1,17 @@
+services:
+  web:
+    image: ape-web
+    environment:
+      FLAG: ${RCTF_FLAG}
+    networks:
+      - ape-web
+    expose:
+      - "5555"
+    mem_limit: 128m
+    cpus: 0.5
+    read_only: false
+    pids_limit: 128
+networks:
+  ape-web:
+    internal: false
+    driver: bridge
