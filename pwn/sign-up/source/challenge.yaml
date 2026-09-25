@@ -1,17 +1,12 @@
-version: "3.8"
-name: sign-up
-
 services:
   sign-up:
-    build: .
-    container_name: sign-up
+    image: sign-up
     environment:
-      CTF_FLAGS: ${RCTF_FLAG}
-    ports:
-      - "4411:4411"
-    restart: unless-stopped
+      CTF_FLAG: ${RCTF_FLAG}
     networks:
       - sign-up-net
+    expose:
+      - "4411"
     read_only: true
     tmpfs:
       - /tmp
