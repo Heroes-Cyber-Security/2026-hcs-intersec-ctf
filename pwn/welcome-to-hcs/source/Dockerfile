@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y \
 RUN useradd -m hcs
 WORKDIR /home/hcs
 
-COPY chall /home/hcs/chall
-COPY entrypoint.sh /entrypoint.sh
+COPY ./chall /home/hcs/chall
+COPY ./entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /home/hcs/chall && \
     chmod +x /entrypoint.sh && \
