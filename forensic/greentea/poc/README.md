@@ -69,9 +69,12 @@ subprocess.run(['ffmpeg', '-y', '-i', 'stream.loas', 'lagu_hasil_ekstrak.wav'])
 
 Setelah script dijalankan, file **`lagu_hasil_ekstrak.wav`** berhasil keluar!
 
+
 ---
 
-### Step 4: Investigasi Audio (Mendengarkan Lagu)
+### Investigasi Audio (Mendengarkan Lagu)
+
+<audio controls src="lagu_hasil_ekstrak.wav" title="Teh Hijau"></audio>
 
 Kita putar file `lagu_hasil_ekstrak.wav`:
 * Terdengar alunan lagu **Tulus - Teh Hijau**.
@@ -85,7 +88,7 @@ Kita putar file `lagu_hasil_ekstrak.wav`:
 
 ---
 
-### Step 5: Visualisasi Spectrogram di Audacity
+### Visualisasi Spectrogram di Audacity
 
 1. Buka file `lagu_hasil_ekstrak.wav` di **Audacity**.
 2. Klik panah kecil di samping nama track di sebelah kiri $\rightarrow$ ubah tampilan dari **Waveform** ke **Spectrogram** (atau tekan shortcut `Shift + S`).
@@ -105,7 +108,7 @@ Kita putar file `lagu_hasil_ekstrak.wav`:
 
 ---
 
-### Step 6: Rekonstruksi Flag
+### Rekonstruksi Flag
 
 Teks di spectrogram terlihat terbalik (*backwards / right-to-left*):
 * `OLLeH{SCH` $\rightarrow$ jika dibalik: `HCS{HeLLO`
